@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Aboutus from './components/Aboutus';
+import Home from './components/Home';
 import Solutions from './components/Solutions';
 import Resources from './components/Resources';
 import Contact2 from './components/Contact2';
@@ -17,43 +17,24 @@ function App() {
           <img src="/logo.png" alt="Logo" className="logo" />
 
           {/* Navigation Menu */}
-          <div className="navMenu">
-            <ul>
-              <li><Link to="/Aboutus">About Us</Link></li>
-              <li><Link to="/Solutions">Solutions</Link></li>
-              <li><Link to="/Resources">Resources</Link></li>
-            </ul>
+          <div className="navMenu"> 
+            <Link to="/Login">
+              <button className='Login'>Log in</button>
+            </Link>
+            <Link to="/Signup">
+              <button className='Signup'>Sign up</button>
+            </Link>
           </div>
 
-          <Link to="/Contact2">
-            <button className='contactbtn'>Contact Us
-              <img src="/arrow.png" alt='arrow' className='arrow' />
-            </button>
-          </Link>
+       
         </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         {/* Pages */}
         <Routes>
-          <Route path="/Aboutus" element={<Aboutus />} />
-          <Route path="/Solutions" element={<Solutions />} />
+          <Route path="/Home.js" element={<Home/>} />
+          {/* <Route path="/Solutions" element={<Solutions />} />
           <Route path="/Resources" element={<Resources />} />
-          <Route path="/Contact2" element={<Contact2 />} />
+          <Route path="/Contact2" element={<Contact2 />} /> */}
         </Routes>
 
       </BrowserRouter>
